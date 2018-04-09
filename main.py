@@ -29,7 +29,7 @@ def usename():
     error_mail =''
 
 
-    if len(user_name) < 3 or len(user_name) > 20:
+    if len(user_name) < 3 or len(user_name) > 20 or user_name.count(' ') > 0:
         user_name = user_name
         error_name = "Not a valid Username"
     elif user_name.isspace() != 0:
@@ -38,7 +38,7 @@ def usename():
     else:
         user_name = user_name
     
-    if len(psw) < 3 or len(psw) > 20:
+    if len(psw) < 3 or len(psw) > 20 or psw.count(' ') > 0:
         psw = ''
         error_psw = "Not a valid Password"
     elif psw.isspace() != 0:
@@ -47,7 +47,7 @@ def usename():
     else:
         psw = psw
 
-    if psw != vpsw or len(vpsw) < 3 or len(vpsw) > 20:
+    if psw != vpsw or len(vpsw) < 3 or len(vpsw) > 20 or vpsw.count (' ') > 0:
         psw = ''
         vpsw = ''
         error_vpsw = " Passwords do not match"
