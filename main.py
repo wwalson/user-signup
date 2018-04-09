@@ -56,7 +56,7 @@ def usename():
 
     
     
-    if mail == '' or mail.count('@') == 1 and mail.count ('.') == 1 and 2 < len(mail) < 21:
+    if mail == '' or mail.count('@') == 1 and mail.count ('.') == 1 and 2 < len(mail) < 21 and ' ' not in mail:
         mail=mail
         error_mail = ''
     else:
